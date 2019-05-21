@@ -6,7 +6,7 @@
 #    By: gmayou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:38:31 by gmayou            #+#    #+#              #
-#    Updated: 2019/05/21 10:36:32 by gmayou           ###   ########.fr        #
+#    Updated: 2019/05/21 10:55:09 by gmayou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS = -Wall -Werror -Wextra
 OPTIONS = -c -I.
 CLEAN = /bin/rm -f
 
-SRC = ft_isalpha.c
+SRC = ft_isalpha.c ft_isdigit.c
 
 all: $(NAME)
 
