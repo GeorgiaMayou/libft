@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/23 12:07:42 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/23 11:47:59 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/23 12:06:47 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
+int	ft_putendl(char *str)
+{
+	int i;
 
-int		ft_isalpha(int a);
-int		ft_isdigit(int a);
-int		ft_isalnum(int a);
-int		ft_isascii(int a);
-int		ft_isprint(int a);
-char	ft_toupper(char a);
-char	ft_tolower(char a);
-int		ft_putchar(char a);
-int		ft_putstr(char *str);
-int		ft_putendl(char *str);
-
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	ft_putchar('\n');
+	return (0);
+}
