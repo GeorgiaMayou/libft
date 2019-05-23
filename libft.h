@@ -6,7 +6,7 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/23 10:22:39 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/23 11:35:20 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int		ft_isascii(int a);
 int		ft_isprint(int a);
 char	ft_toupper(char a);
 char	ft_tolower(char a);
+int		ft_putchar(char a);
+int		ft_putstr(char *str);
 
 #endif

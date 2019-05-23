@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:15:06 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/23 11:26:30 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/23 11:16:20 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/23 11:34:57 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int a)
+#include "libft.h"
+
+int	ft_putstr(char *str)
 {
-	if (a > 64 && a < 91)
-		return (1);
-	else if (a > 96 && a < 123)
-		return (1);
-	else if (a > 47 && a < 58)
-		return (1);
-	else
-		return (0);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (0);
 }
