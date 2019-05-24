@@ -6,7 +6,7 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/24 15:00:20 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/24 16:31:31 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char 	*ft_strdup(const char *str);
 int		ft_isspace(char c);
 int		ft_atoi(const char *str);
 char 	*ft_strchr(const char *s, int c);
+void	*ft_memset(void *b, int c, size_t len);
 
 #endif
