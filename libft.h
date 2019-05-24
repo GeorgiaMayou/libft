@@ -6,7 +6,7 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/23 12:07:42 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/23 18:06:47 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,14 @@ int		ft_isascii(int a);
 int		ft_isprint(int a);
 char	ft_toupper(char a);
 char	ft_tolower(char a);
-int		ft_putchar(char a);
-int		ft_putstr(char *str);
-int		ft_putendl(char *str);
+void	ft_putchar(char a);
+void	ft_putstr(char const *str);
+void	ft_putendl(char const *str);
+void    ft_putchar_fd(char a, int fd);
+void    ft_putstr_fd(char const *str, int fd);
+void    ft_putendl_fd(char const *str, int fd);
+size_t	ft_strlen(const char *s);
+char 	*ft_strcpy(char *dst, const char *src);
+char 	*ft_strdup(const char *str);
 
 #endif
