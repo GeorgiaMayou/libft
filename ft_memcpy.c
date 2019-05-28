@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 14:41:28 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/24 17:36:03 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/25 16:16:21 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/25 16:29:50 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int i;
+	char *s1;
+	char *s2;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	s1 = (char *)dst;
+	s2 = (char *)src;
+	while (n-- > 0)
+		*s1++ = *s2++;
+	return (s1);
 }

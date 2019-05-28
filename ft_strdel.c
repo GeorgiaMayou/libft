@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 14:41:28 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/24 17:36:03 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/25 15:44:30 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/25 16:37:31 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_strdel(char **as)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (**as)
+		ft_memdel((void *)as);
 }

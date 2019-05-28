@@ -6,23 +6,23 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 14:05:53 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/24 15:32:42 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/25 16:35:46 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (*s == c)
-		return((char*)s);
+		return ((char*)s);
 	while (*s++)
 	{
 		if (*s != c)
 			continue;
 		if (*s == c)
 			return ((char *)s);
-		else 
+		else
 			return (NULL);
 	}
 	return (NULL);

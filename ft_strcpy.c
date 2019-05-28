@@ -6,16 +6,18 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:14:11 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/23 16:46:37 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/25 16:36:56 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dst, const char *src)
+#include "libft.h"
+
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while (src != '\0')
+	while (src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
