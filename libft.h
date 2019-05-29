@@ -6,7 +6,7 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/25 16:48:12 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/28 17:42:57 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ void	ft_bzero(void *s, size_t n);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+int		ft_isnegative(char c);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	ft_striter(char *s, void (*f)(char *));
 
 #endif

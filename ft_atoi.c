@@ -6,12 +6,11 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:30:37 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/24 14:29:58 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/05/28 16:01:49 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -22,11 +21,10 @@ int	ft_atoi(const char *str)
 	ans = 0;
 	while (*str)
 	{
-		while (ft_isspace(*str) || *str == '+')
+		while (ft_isspace(*str))
 			str++;
 		if ((*str == '+' || *str == '-') && (ft_isdigit(*(str + 1))))
-			if (*str == '-' && (sign = -1))
-				str++;
+			sign = ft_isnegative(*str++);
 		if (ft_isdigit(*str) == 1)
 		{
 			ans = *str - '0';
