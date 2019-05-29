@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 16:57:40 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/29 09:50:49 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/29 12:13:52 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/29 13:15:06 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	while (*s)
+	size_t		in;
+	char		*ptr;
+
+	in = 0;
+	ptr = (char *)haystack;
+	if (!*needle)
+		return (ptr);
+	while (*ptr && len)
 	{
-		f(s);
-		s++;
+		while ((needle[in] == *(ptr + in)) && len)
+		{
+			if (needle[in + 1] == '\0')
+				return (ptr);
+			in++;
+			len--;
+		}
+		in = 0;
+		ptr++;
+		len--;
 	}
+	return (0);
 }

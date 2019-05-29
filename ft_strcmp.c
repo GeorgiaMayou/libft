@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 16:57:40 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/29 09:50:49 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/29 11:41:31 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/29 12:07:17 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s)
+	while (*s1 == *s2)
 	{
-		f(s);
-		s++;
+		if (*s1 == '\0')
+			return (0);
+		s1++;
+		s2++;
 	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
