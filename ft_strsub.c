@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/25 16:16:21 by gmayou            #+#    #+#             */
-/*   Updated: 2019/05/30 09:34:43 by gmayou           ###   ########.fr       */
+/*   Created: 2019/05/30 16:11:08 by gmayou            #+#    #+#             */
+/*   Updated: 2019/05/30 17:34:18 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char		*s1;
-	const char	*s2;
-
-	s1 = (char *)dst;
-	s2 = (char *)src;
-	if (s1 == NULL && s2 == NULL)
-		return (dst);
-	while (n > 0)
-	{
-		*s1++ = *s2++;
-		n--;
-	}
-	return (dst);
+	char	*new;
+	
+	new = ft_strnew(len);
+	while (*new)
+		*new++ = s[start++];
+	return (new);
 }
