@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 16:11:08 by gmayou            #+#    #+#             */
-/*   Updated: 2019/06/04 15:39:30 by gmayou           ###   ########.fr       */
+/*   Created: 2019/06/04 16:19:40 by gmayou            #+#    #+#             */
+/*   Updated: 2019/06/04 17:26:26 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
+	size_t	begin;
+	size_t	end;
 	char	*new;
 	size_t	i;
 
 	i = 0;
-	new = ft_strnew(len);
-	ft_memset(new, '\0', len);
-	if (new == NULL)
-		return (NULL);
-	while (len > 0)
-	{
-		new[i++] = s[start++];
-		len--;
-	}
+	begin = 0;
+	end = ft_strlen(s);
+	new = ft_strnew(end);
+	while (ft_isspace(s[begin]) == 1)
+		begin++;
+	while (ft_isspace(s[end - 1]) == 1)
+		end--;
+	while (begin < end)
+		new[i++] = s[begin++];
 	return (new);
 }
