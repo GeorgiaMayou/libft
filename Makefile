@@ -6,7 +6,7 @@
 #    By: gmayou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:38:31 by gmayou            #+#    #+#              #
-#    Updated: 2019/06/04 16:32:32 by gmayou           ###   ########.fr        #
+#    Updated: 2019/06/05 17:14:35 by gmayou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  ft_memccpy.c ft_striter.c ft_strequ.c ft_strnequ.c ft_striteri.c \
 	  ft_memmove.c ft_strcmp.c ft_strnstr.c ft_memchr.c ft_memcmp.c ft_strncmp.c \
 	  ft_strcat.c ft_strncat.c ft_strlcat.c ft_strmap.c ft_strmapi.c ft_strsub.c \
-	  ft_strjoin.c ft_strtrim.c 
+	  ft_strjoin.c ft_strtrim.c ft_putnbr_fd.c ft_putnbr.c ft_itoa.c ft_strrev.c
 
 all: $(NAME)
 
