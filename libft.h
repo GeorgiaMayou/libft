@@ -6,7 +6,7 @@
 /*   By: gmayou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:06:36 by gmayou            #+#    #+#             */
-/*   Updated: 2019/06/05 17:14:39 by gmayou           ###   ########.fr       */
+/*   Updated: 2019/06/06 16:50:06 by gmayou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,10 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr(int n);
 char	*ft_itoa(int n);
 char	*ft_strrev(char *str);
+char	**ft_strsplit(char const *s, char c);
+size_t	ft_wrdlen(char const *s, int i, char c);
+size_t	ft_wrdcnt(const char *s, char c);
+int		ft_isupper(char a);
+int		ft_islower(char a);
 
 #endif
